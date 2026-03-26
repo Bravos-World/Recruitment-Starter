@@ -10,7 +10,7 @@
 
 ## Installation (JitPack)
 
-Current release tag: `1.0.0`
+Current release tag: `1.0.1`
 
 ### Gradle (Kotlin DSL)
 
@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.Bravos-World:Recruitment-Starter:1.0.0")
+    implementation("com.github.Bravos-World:Recruitment-Starter:1.0.1")
 }
 ```
 
@@ -39,7 +39,7 @@ dependencies {
     <dependency>
         <groupId>com.github.Bravos-World</groupId>
         <artifactId>Recruitment-Starter</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 ```

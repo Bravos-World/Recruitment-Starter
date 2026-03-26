@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.bravos.recruitment.libs"
-version = "1.0.0"
+version = "1.0.1"
 description = "starter"
 
 java {
@@ -34,7 +34,7 @@ dependencyManagement {
 }
 
 dependencies {
-    api("com.github.Bravos-World:Recruitment-Utils:1.0.0")
+    api("com.github.Bravos-World:Recruitment-Utils:1.0.1")
 
     compileOnly("org.projectlombok:lombok:1.18.44")
     annotationProcessor("org.projectlombok:lombok:1.18.44")
