@@ -1,7 +1,5 @@
 package com.bravos.recruitment.libs.starter.annotation;
 
-import com.bravos.recruitment.libs.starter.model.Action;
-
 import java.lang.annotation.*;
 
 
@@ -24,6 +22,6 @@ public @interface HasPermission {
    *
    * @return the action name
    */
-  Action action();
+  String action();
 
 }

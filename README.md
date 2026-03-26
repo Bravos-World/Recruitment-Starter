@@ -10,7 +10,7 @@
 
 ## Installation (JitPack)
 
-Current release tag: `1.0.1`
+Current release tag: `1.0.2`
 
 ### Gradle (Kotlin DSL)
 
@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.Bravos-World:Recruitment-Starter:1.0.1")
+    implementation("com.github.Bravos-World:Recruitment-Starter:1.0.2")
 }
 ```
 
@@ -39,7 +39,7 @@ dependencies {
     <dependency>
         <groupId>com.github.Bravos-World</groupId>
         <artifactId>Recruitment-Starter</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 </dependencies>
 ```
@@ -96,7 +96,7 @@ The security filter reads these headers from incoming requests:
 public class UserController {
 
     @Authenticated
-    @HasPermission(resource = "user", action = Action.READ)
+    @HasPermission(resource = "user", action = "read")
     @GetMapping("/{id}")
     public UserResponse getUser(@PathVariable long id) {
         // ...

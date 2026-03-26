@@ -10,6 +10,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.jspecify.annotations.NonNull;
 
+import java.util.Locale;
+
 
 @Slf4j
 @Aspect
@@ -32,7 +34,8 @@ public class SecurityAspect {
       throw new ForbiddenException();
     }
 
-    String permissionKey = hasPermission.resource() + ":" + hasPermission.action();
+    String action = hasPermission.action().toLowerCase(Locale.ROOT);
+    String permissionKey = hasPermission.resource() + ":" + action;
 
     if (!authContext.permissions().contains(permissionKey)) {
       log.debug("Access denied: user lacks permission {} required for method {}", permissionKey, methodSignature.getMethod().getName());
