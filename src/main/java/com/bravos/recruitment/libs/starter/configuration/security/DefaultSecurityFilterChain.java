@@ -1,0 +1,35 @@
+package com.bravos.recruitment.libs.starter.configuration.security;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.SecurityFilterChain;
+
+/**
+ * Provides a default stateless {@link SecurityFilterChain} for applications
+ * that do not define one.
+ */
+@Configuration
+public class DefaultSecurityFilterChain {
+
+  /**
+   * Builds a permissive baseline filter chain while disabling stateful features.
+   */
+  @Bean
+  @ConditionalOnMissingBean(SecurityFilterChain.class)
+  @ConditionalOnBean(HttpSecurity.class)
+  public SecurityFilterChain securityFilterChain(HttpSecurity http) {
+    http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+        .formLogin(AbstractHttpConfigurer::disable)
+        .logout(AbstractHttpConfigurer::disable)
+        .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .cors(AbstractHttpConfigurer::disable)
+        .csrf(AbstractHttpConfigurer::disable);
+    return http.build();
+  }
+
+}

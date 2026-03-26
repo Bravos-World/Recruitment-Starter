@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "starter.audit.data",
+      "type": "com.bravos.recruitment.libs.starter.configuration.audit.AuditDataProperties",
+      "sourceType": "com.bravos.recruitment.libs.starter.configuration.audit.AuditDataProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "starter.object-mapper.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable the ObjectMapper auto-configuration provided by this starter.",
+      "sourceType": "com.bravos.recruitment.libs.starter.configuration.objectmapper.ObjectMapperAutoConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "starter.audit.data.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable audit auto-configuration (AuditorAware and JPA auditing integration).",
+      "sourceType": "com.bravos.recruitment.libs.starter.configuration.audit.AuditDataProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "starter.audit.data.default-system-id",
+      "type": "java.lang.Long",
+      "description": "Fallback auditor ID used when no authenticated user is available in the current request context.",
+      "sourceType": "com.bravos.recruitment.libs.starter.configuration.audit.AuditDataProperties",
+      "defaultValue": 0
+    }
+  ]
+}
+

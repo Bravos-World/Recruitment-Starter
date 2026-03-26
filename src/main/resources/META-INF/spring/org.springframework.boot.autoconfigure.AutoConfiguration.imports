@@ -1,0 +1,5 @@
+com.bravos.recruitment.libs.starter.configuration.audit.AuditAwareAutoConfiguration
+com.bravos.recruitment.libs.starter.configuration.audit.AuditJpaAutoConfiguration
+com.bravos.recruitment.libs.starter.configuration.objectmapper.ObjectMapperAutoConfiguration
+com.bravos.recruitment.libs.starter.configuration.snowflake.SnowflakeAutoConfiguration
+
